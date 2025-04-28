@@ -114,7 +114,7 @@ AVERAGEX(
     'Panic_Attack_Data'[AttackFrequency]
 )
 
-(Above DAX measures are based on your Excel file. Adjust field names if they differ.)
+```
 📢 Notes
 
     This healthcare-focused dashboard provides a real-time overview of panic attack patterns among patients.
