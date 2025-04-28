@@ -1,8 +1,3 @@
-
-
-# 🎯 Tumhara Final README Content:
-
-```markdown
 # Panic Attacks Data Analysis Dashboard
 
 ### 📊 Dashboard Link
@@ -93,47 +88,45 @@ CALCULATE(
     COUNTROWS('Panic_Attack_Data'),
     'Panic_Attack_Data'[Dizziness] = TRUE()
 )
-```
 
-2. **Number of Patients by Sleep Hours:**
-```DAX
+    Number of Patients by Sleep Hours:
+
 Patients_by_Sleep_Hours = 
 SUMMARIZE(
     'Panic_Attack_Data',
     'Panic_Attack_Data'[SleepHours],
     "Patient_Count", COUNT('Panic_Attack_Data'[PatientID])
 )
-```
 
-3. **Average Panic Score by Age Group:**
-```DAX
+    Average Panic Score by Age Group:
+
 Avg_Panic_Score = 
 AVERAGEX(
     FILTER('Panic_Attack_Data', NOT(ISBLANK('Panic_Attack_Data'[PanicScore]))),
     'Panic_Attack_Data'[PanicScore]
 )
-```
 
-4. **Average Panic Attack Frequency by Trigger Reason:**
-```DAX
+    Average Panic Attack Frequency by Trigger Reason:
+
 Avg_Panic_Attack_Frequency = 
 AVERAGEX(
     FILTER('Panic_Attack_Data', NOT(ISBLANK('Panic_Attack_Data'[AttackFrequency]))),
     'Panic_Attack_Data'[AttackFrequency]
 )
-```
 
+(Above DAX measures are based on your Excel file. Adjust field names if they differ.)
+📢 Notes
 
+    This healthcare-focused dashboard provides a real-time overview of panic attack patterns among patients.
 
-# 📢 Notes
+    It enables healthcare professionals to:
 
-- This healthcare-focused dashboard provides a real-time overview of panic attack patterns among patients.
-- It enables healthcare professionals to:
-  - Identify critical symptoms
-  - Understand risk factors related to lifestyle
-  - Strategize effective intervention methods for different patient groups
-- Developed using Power BI Desktop with cloud-based data ingestion from Snowflake.
+        Identify critical symptoms
 
+        Understand risk factors related to lifestyle
 
+        Strategize effective intervention methods for different patient groups
 
+    Developed using Power BI Desktop with cloud-based data ingestion from Snowflake.
 
+    Published to Power BI Service for easy collaboration and portfolio showcasing.
